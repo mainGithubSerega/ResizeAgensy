@@ -81,6 +81,7 @@ html, body {
   font-weight: 700;
   text-align: center;
   line-height: 67px;
+  cursor: pointer;
 }
 
 .btn span {
@@ -1466,5 +1467,126 @@ input[type=range]::-webkit-slider-thumb {
   }
   .page-footer__title {
     font-size: 30px;
+  }
+}
+
+.shadow-modal {
+  position: fixed;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 52;
+  background: rgba(43, 39, 56, 0.7);
+  backdrop-filter: blur(6px);
+  opacity: 1;
+  visibility: visible;
+  transition: 0.2s ease;
+}
+
+.modal {
+  margin: 0 15px;
+  flex: 0 1 505px;
+  max-width: 505px;
+  background-color: #fff;
+  overflow: hidden;
+  border-radius: 24px;
+}
+
+.modal__wrap {
+  padding: 50px 50px 0;
+  box-sizing: border-box;
+}
+
+.modal__title {
+  font-size: 36px;
+  line-height: 35px;
+  color: #2E2E2E;
+  text-transform: uppercase;
+  font-weight: 700;
+  max-width: 330px;
+  margin-bottom: 20px;
+}
+
+.modal__title span {
+  display: block;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: initial;
+  margin-top: 3px;
+}
+
+.modal-form__label {
+  display: block;
+  font-size: 16px;
+  line-height: 30px;
+  color: #2E2E2E;
+  margin-bottom: 14px;
+}
+
+.modal-form__label:last-child {
+  margin: 0;
+}
+
+.modal-form__input {
+  display: block;
+  width: 100%;
+  min-height: 36px;
+  background: #FAF9FF;
+  border: 1px solid #EDE9FE;
+  box-sizing: border-box;
+  border-radius: 32px;
+  padding: 0 20px;
+}
+
+.modal-form__submit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-form__btn {
+  box-shadow: none;
+  border: none;
+  margin: 18px 0;
+}
+
+.modal-form__brif {
+  flex: 0 1 110px;
+  font-size: 14px;
+  color: #2E2E2E;
+  line-height: 20px;
+}
+
+.modal-form__attention {
+  background: #FAF9FF;
+  padding: 24px 50px;
+  box-sizing: border-box;
+  font-size: 14px;
+  line-height: 20px;
+  color: #2E2E2E;
+}
+
+.hide {
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.2s ease;
+}
+
+@media (max-width: 475px) {
+  .modal-form__submit {
+    flex-wrap: wrap;
+  }
+  .modal-form__brif {
+    flex: 0 1 100%;
+  }
+  .modal__title {
+    font-size: 24px;
+    line-height: 23px;
+  }
+  .modal__title span {
+    margin-top: 15px;
   }
 }
