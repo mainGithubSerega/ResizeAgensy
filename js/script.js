@@ -68,3 +68,21 @@ select('.select-mobile', {
         {name: 'космос', id: '03'},
     ]
 })
+const where = document.querySelector('.page-footer__media'),
+      who = document.querySelector('.social-media-footer'),
+      from = document.querySelector('.page-footer-social')
+
+window.addEventListener('resize', function(e){
+    const widthViewport = Math.max(document.documentElement.clientWidth, window.innerWidth || 0)
+    if(widthViewport <= 1200){
+        if(!who.classList.contains('done')){
+            where.insertBefore(who, where.children[0])
+            where.classList.add('done')
+        }
+    } else {
+        if(where.classList.contains('done')){
+            from.insertBefore(who, from.children[1])
+            where.classList.remove('done')
+        }
+    }
+})
