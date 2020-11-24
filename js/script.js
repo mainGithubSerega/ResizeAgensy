@@ -71,17 +71,34 @@ select('.select-mobile', {
 const modalWindow = (startSelector, modalSelector, closeSelector) => {
     const btn = document.querySelectorAll(startSelector),
           modal = document.querySelector(modalSelector),
-          close = document.querySelector(closeSelector)
+          close = document.querySelectorAll(closeSelector),
+          allPopups = document.querySelectorAll('[data-popup]')
 
     btn.forEach(i => {
         i.addEventListener('click', (e) => {
             e.preventDefault()
             modal.classList.remove('hide')
             document.body.style.overflow = 'hidden'
+            
+        })
+    })
+    close.forEach(i => {
+        i.addEventListener('click', function(){
+            allPopups.forEach(item => {
+                item.classList.add('hide')
+            })
+            modal.classList.add('hide')
+            document.body.style.overflow = ''
         })
     })
 }
-modalWindow('.main-content__btn', '.shadow-modal')
+modalWindow('.page-form-info__btn', '.shadow-modal', '.modal-form__close');
+modalWindow('.main-content__btn', '.shadow-modal-consultation', '.modal-form__close');
+modalWindow('.more-typeBanner', '.shadow-modal-typeBanner', '.modal-form__close');
+modalWindow('.more-collection', '.shadow-modal-conceptions', '.modal-form__close');
+modalWindow('.more-resizes', '.shadow-modal-resize', '.modal-form__close');
+modalWindow('.more-hard', '.shadow-modal-hard', '.modal-form__close');
+modalWindow('.modal-form__brif', '.shadow-modal-brif', '.modal-form__close');
 const where = document.querySelector('.page-footer__media'),
       who = document.querySelector('.social-media-footer'),
       from = document.querySelector('.page-footer-social')
