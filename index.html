@@ -696,11 +696,12 @@
             </div>
         </div>
         <!-- cложность-->
-        <div class="shadow-modal shadow-modal-brif hide" data-popup>
+        <!-- bif form-->
+        <div class="shadow-modal shadow-modal-brif hide " data-popup>
             <div class="modal__body">
                 <div class="modal modal-brif">
-                    <div class="modal__wrap modal__wrap-questions">
-                        <a class="modal-brif__return" href="#">Вернуться к упрощенной заявке</a>
+                    <div class="modal__wrap modal__wrap-brif">
+                        <a class="modal-brif__return modal-brif__development" href="#">Вернуться к упрощенной заявке</a>
                         <div class="modal__title modal__title-brif">бриф на разработку</div>
                         <form class="modal-brif__form" action="#">
                             <div class="modal-brif__personal">
@@ -737,8 +738,33 @@
                                         <label class="modal-brif__name" for="brif-static">Статика</label>
                                     </div>
                                 </div>
+                                <div class="modal-brif__banner-size">
+                                    <span>Размер баннеров</span>
+                                    <div class='modal-brif__textarea'>
+                                        <textarea placeholder="240x400, 336x280, 728x90" class='modal-brif__area' name="txt-size"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-brif__requires">
+                                <span>Технические требования площадки размещения, баннерной сети</span>
+                                <div class='modal-brif__textarea'>
+                                    <textarea class='modal-brif__area' name="txt-size"></textarea>
+                                </div>
+                            </div>
+                            <div class="modal-brif__requires">
+                                <span>Пожелания или сценарий баннера, если имеется (можно прикреплять ссылки)</span>
+                                <div class='modal-brif__textarea'>
+                                    <textarea class='modal-brif__area' name="txt-size"></textarea>
+                                </div>
+                            </div>
+                            <div class="modal-brif__send">
+                                <button class="modal-brif__btn btn" type="submit">отправить</button>
+                                <span>* Указаны пункты, обязательные к заполнению</span>
                             </div>
                         </form>
+                    </div>
+                    <div class="modal-form__attention modal-form__attention-brif">
+                        Нажимая кнопку “ОТПРАВИТЬ”, Вы даете согласие на обработку персональных данных
                     </div>
                     <div class="modal-form__close">
                         <span></span>
@@ -746,6 +772,7 @@
                 </div>
             </div>
         </div>
+        <!-- bif form-->
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="js/script.js"></script>
