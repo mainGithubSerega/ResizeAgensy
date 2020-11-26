@@ -20,8 +20,18 @@ labels.addEventListener('click', (e) => {
 $(document).ready(function(){
     $('.page-slider-slider').slick({
         slidesToShow:5,
-        centerMode:true,
         variableWidth:true,
+        centerMode:true,
+        dots:true,
+        responsive: [
+            {
+                breakpoint: 1040,
+                settings: {
+                    arrows:false
+                }
+            
+            }
+        ]
     })
 })
 const select = (select, items) => {
