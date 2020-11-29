@@ -23,7 +23,7 @@ $(document).ready(function(){
         variableWidth:true,
         centerMode:true,
         dots:true,
-        speed:500,
+        speed:900,
         waitForAnimate:false,
         easing:'ease',
         responsive: [
@@ -154,9 +154,9 @@ let input = document.querySelector('.page-form-form__inp')
 let line = document.querySelector('.page-form-form__line')
 
 range.oninput = function(){
-    selector.style.left = (this.value * 9.2) + '%'
+    selector.style.left = (this.value * 9) + '%'
     input.value = range.value
-    line.style.width = (this.value * 9.3) + '%' 
+    line.style.width = (this.value * 9.2) + '%' 
 }
 let counterBtns = document.querySelectorAll('.page-form-form-counter')
 if(counterBtns.length > 0){
