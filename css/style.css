@@ -109,6 +109,15 @@ html, body {
   transition: 0.2s ease;
 }
 
+.btn:active span {
+  background: #351E84;
+  color: #291961;
+}
+
+.btn:active span::after {
+  border-color: transparent;
+}
+
 .btn span {
   width: 237px;
   height: 66px;
@@ -202,6 +211,7 @@ html, body {
   border-radius: 35px;
   transition: 0.2s ease;
   position: relative;
+  outline: none;
 }
 
 .btn-second::before {
@@ -217,14 +227,6 @@ html, body {
   display: block;
 }
 
-.btn-second span {
-  font-size: 18px;
-  font-weight: 700;
-  text-transform: uppercase;
-  text-align: center;
-  color: #C3B6F0;
-}
-
 .btn-second:hover::before {
   border-color: #FFD370;
   transition: 0.2s ease;
@@ -237,6 +239,30 @@ html, body {
 .btn-second:hover span {
   color: #FABE37;
   transition: 0.2s ease;
+}
+
+.btn-second:active::before {
+  border-color: transparent;
+}
+
+.btn-second:active span {
+  color: #291961;
+  background: #351E84;
+}
+
+.btn-second span {
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  color: #C3B6F0;
+  background: linear-gradient(318.21deg, #351E84 14.05%, #4A30A8 85.29%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 35px;
 }
 
 .tabs {
@@ -1277,6 +1303,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
   color: #fff;
 }
 
+.page-form-form__checkbox.active:hover {
+  background: #FABE37;
+  border: 2px solid #FFD370;
+  color: #fff;
+}
+
 .page-form-form__checkbox:last-child {
   margin: 0;
 }
@@ -1854,8 +1886,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
     visibility: hidden;
   }
   .page-slider-slider__mobileBtn {
-    display: block;
-    margin: 20px auto 20px;
+    display: inline-block;
+  }
+  .page-slider-slider__mobile {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
   }
   .page-slider-slider .slick-dots {
     bottom: -170px;
