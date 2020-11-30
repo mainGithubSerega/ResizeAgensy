@@ -36,6 +36,10 @@ $(document).ready(function(){
             }
         ]
     })
+    $(".page-slider-slider .page-slider-slider__slide").on("click", function() {
+        const index = $(this).attr("data-slick-index");
+        $(".page-slider-slider").slick("slickGoTo", index);
+      });
 })
 const select = (select, items) => {
     const dropdown = document.querySelector(select),
