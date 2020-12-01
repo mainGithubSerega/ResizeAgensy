@@ -86,15 +86,28 @@
             <div class="main-content">
                 <div class="container">
                     <div class="main-content__inner">
-                        <div class="main-content__img">
-                            <img src="images/Rocket.png" alt="">
+                        <div class="main-content__images">
+                            <div class="main-content__img main-content__img-rocket _anim-items _anim-hide">
+                                <img src="images/rocket-images/SpaceX.png" alt="">
+                            </div>
+                            <div class="main-content__img main-content__img-circle _anim-items _anim-hide">
+                                <img src="images/rocket-images/circle.svg" alt="">
+                            </div>
+                            <div class="main-content__img main-content__img-shadow _anim-items _anim-hide">
+                                <img src="images/rocket-images/Shadow.png" alt="">
+                            </div>
                         </div>
                         <div class="main-content__texts">
-                            <div class="main-content__title"><span>Html5</span> баннеры</div>
-                            <div class="main-content__subtitle">Вид интернет-баннеров, позволяющий создавать яркую и
+                            <div class="main-content__imgTxt">
+                                <div class="main-content__mini _anim-items _anim-hide">
+                                    <img src="images/mini-rocket.svg" alt="mini-rocket">
+                                </div>
+                                <div class="main-content__title _anim-items _anim-hide"><span>Html5</span> баннеры</div>
+                            </div>
+                            <div class="main-content__subtitle _anim-items _anim-hide">Вид интернет-баннеров, позволяющий создавать яркую и
                                 динамичную анимацию оптимизированную для работы на любых устройствах, в том числе
                                 планшетах и телефонах</div>
-                            <a href="#" class="main-content__btn btn"><span>Оставить заявку</span></a>
+                            <a href="#" class="main-content__btn btn _anim-items _anim-hide"><span>Оставить заявку</span></a>
                         </div>
                     </div>
                 </div>
@@ -533,12 +546,12 @@
                     <div class="modal__wrap">
                         <div class="modal__title">Заявка на консультацию <span>Укажите контактные данные для обратной
                                 связи</span></div>
-                        <form class="modal-form" action="#">
+                        <form class="modal-form modal-form-consultation" action="#">
                             <label class="modal-form__label" for="input-name">Ваше имя
-                                <input class="modal-form__input" id="input-name" type="text">
+                                <input class="modal-form__input _valid" id="input-name" type="text">
                             </label>
                             <label class="modal-form__label" for="input-tell">Номер телефона
-                                <input class="modal-form__input" id="input-tell" type="text">
+                                <input class="modal-form__input _valid number" id="input-tell" type="text">
                             </label>
                             <div class="modal-form__submit">
                                 <button class="modal-form__btn btn-second" type="submit"><span>Отправить</span></button>
@@ -564,12 +577,12 @@
                     <div class="modal__wrap">
                         <div class="modal__title">Заявка на разработку <span>Укажите контактные данные для обратной
                                 связи</span></div>
-                        <form class="modal-form" action="#">
+                        <form class="modal-form modal-form-development" action="#">
                             <label class="modal-form__label" for="input-name">Ваше имя
-                                <input class="modal-form__input" id="input-name" type="text">
+                                <input class="modal-form__input _valid" id="input-name" type="text">
                             </label>
                             <label class="modal-form__label" for="input-tell">Номер телефона
-                                <input class="modal-form__input" id="input-tell" type="text">
+                                <input class="modal-form__input _valid number" id="input-tell" type="text">
                             </label>
                             <div class="modal-form__submit">
                                 <button class="modal-form__btn btn-second" type="submit"><span>Отправить</span></button>
@@ -714,7 +727,7 @@
                             <div class="modal-brif__personal">
                                 <div class="modal-brif__column">
                                     <label class="modal-brif__label">Ваше имя*
-                                        <input class="modal-brif__input" type="text">
+                                        <input class="modal-brif__input _valid" type="text">
                                     </label>
                                     <label class="modal-brif__label">Название компании
                                         <input class="modal-brif__input" type="text">
@@ -722,7 +735,7 @@
                                 </div>
                                 <div class="modal-brif__column">
                                     <label class="modal-brif__label">Номер телефона*
-                                        <input class="modal-brif__input" type="text">
+                                        <input class="modal-brif__input _valid number" type="text">
                                     </label>
                                     <label class="modal-brif__label">URL сайта
                                         <input class="modal-brif__input" type="text">
