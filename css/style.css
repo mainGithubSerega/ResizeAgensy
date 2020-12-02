@@ -2113,33 +2113,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
 }
 
 @media (max-width: 600px) {
-  .page-slider-slider .page-slider-slider__slide.slick-center .page-slider-slider__frame {
-    opacity: 0;
-    visibility: hidden;
-  }
-  .page-slider-slider .page-slider-slider__slide.slick-center .page-slider-slider__img-01 {
-    background: url("../images/slider-image/01hover.png") no-repeat center/cover;
-  }
-  .page-slider-slider .page-slider-slider__slide.slick-center .page-slider-slider__img-02 {
-    background: url("../images/slider-image/02hover.png") no-repeat center/cover;
-  }
-  .page-slider-slider .page-slider-slider__slide.slick-center .page-slider-slider__img-03 {
-    background: url("../images/slider-image/03hover.png") no-repeat center/cover;
-  }
-  .page-slider-slider .page-slider-slider__slide.slick-center .page-slider-slider__img-04 {
-    background: url("../images/slider-image/04hover.png") no-repeat center/cover;
-  }
-  .page-slider-slider .page-slider-slider__slide.slick-center .page-slider-slider__img-05 {
-    background: url("../images/slider-image/05hover.png") no-repeat center/cover;
-  }
-  .page-slider-slider .page-slider-slider__slide.slick-center .page-slider-slider__img-06 {
-    background: url("../images/slider-image/06hover.png") no-repeat center/cover;
-  }
   .page-slider-slider .slick-center.page-slider-slider__slide {
     width: 240px;
   }
   .page-slider-slider .slick-center.page-slider-slider__slide .page-slider-slider__item {
-    background-color: none;
+    background: none;
     padding: 0;
   }
   .page-slider-slider .slick-center.page-slider-slider__slide .page-slider-slider__info {
