@@ -92,6 +92,7 @@ html, body {
   width: 100%;
   height: 100%;
   z-index: -1;
+  -webkit-filter: blur(4px);
   filter: blur(4px);
   border-radius: 35px;
   box-shadow: -16px -13px 35px 10px #4A30A8;
@@ -165,6 +166,7 @@ html, body {
   width: 100%;
   height: 100%;
   z-index: -1;
+  -webkit-filter: blur(4px);
   filter: blur(4px);
   border-radius: 35px;
   box-shadow: -16px -13px -8px 10px #4A30A8;
@@ -570,6 +572,15 @@ html, body {
   box-shadow: 0 0 15px red;
 }
 
+@-webkit-keyframes transformY {
+  0% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
 @keyframes transformY {
   0% {
     transform: translateY(20px);
@@ -889,6 +900,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
   position: relative;
   z-index: 3;
   transition: all 1.5s ease;
+  -webkit-animation: transformY 2s ease infinite alternate;
   animation: transformY 2s ease infinite alternate;
   opacity: 0;
   top: 300px;
@@ -1035,6 +1047,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
     transform: translate(-50%, -50%);
     width: 100%;
     height: 100%;
+    -o-object-fit: cover;
     object-fit: cover;
     display: block;
   }
@@ -1051,6 +1064,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    -o-object-fit: cover;
     object-fit: cover;
   }
   .main-content__img-shadow {
@@ -2011,6 +2025,20 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
 .page-slider-slider__frame {
   opacity: 0;
   visibility: hidden;
+  background-color: #e5e5e5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #2E2E2E;
+  font-weight: 400;
+  font-size: 14px;
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+
+.page-slider-slider__frame span {
+  font-weight: 700;
 }
 
 .page-slider-slider__name {
@@ -2335,6 +2363,30 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
   border-radius: 8px;
   padding: 7px 0 0 20px;
   outline: none;
+}
+
+.modal-brif__area::-webkit-input-placeholder {
+  font-size: 14px;
+  line-height: 16px;
+  color: #B1ACCB;
+}
+
+.modal-brif__area::-moz-placeholder {
+  font-size: 14px;
+  line-height: 16px;
+  color: #B1ACCB;
+}
+
+.modal-brif__area:-ms-input-placeholder {
+  font-size: 14px;
+  line-height: 16px;
+  color: #B1ACCB;
+}
+
+.modal-brif__area::-ms-input-placeholder {
+  font-size: 14px;
+  line-height: 16px;
+  color: #B1ACCB;
 }
 
 .modal-brif__area::placeholder {
