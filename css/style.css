@@ -2025,20 +2025,45 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
 .page-slider-slider__frame {
   opacity: 0;
   visibility: hidden;
-  background-color: #e5e5e5;
+  position: relative;
+  width: 240px;
+  height: 400px;
+}
+
+.page-slider-slider__frame iframe {
+  display: block;
+  position: relative;
+  z-index: 20;
+}
+
+.page-slider-slider__frame::before {
+  content: 'Если анимация не запустилась - отключите блокировщик рекламы.';
+  position: absolute;
+  color: #2E2E2E;
+  font-size: 14px;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  color: #2E2E2E;
-  font-weight: 400;
-  font-size: 14px;
   padding: 0 30px;
   box-sizing: border-box;
+  text-align: center;
+  line-height: 20px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #e5e5e5;
+  z-index: 12;
 }
 
-.page-slider-slider__frame span {
-  font-weight: 700;
+.page-slider-slider__error {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: red;
+  z-index: 333;
 }
 
 .page-slider-slider__name {
