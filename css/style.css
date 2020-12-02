@@ -337,8 +337,13 @@ html, body {
   transition-delay: 0.4s;
 }
 
-.page-slider-slider .page-slider-slider__slide.slick-center .page-slider-slider__img-01 {
-  background: url("../images/slider-image/01hover.png") no-repeat center/cover;
+.page-slider-slider .page-slider-slider__slide.slick-center .page-slider-slider__img {
+  background: transparent;
+}
+
+.page-slider-slider .page-slider-slider__slide.slick-center .page-slider-slider__frame {
+  opacity: 1;
+  visibility: visible;
 }
 
 .page-slider-slider .slick-center.page-slider-slider__slide .page-slider-slider__item {
@@ -838,7 +843,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
   height: 40px;
   margin-right: 20px;
   display: inline-block;
-  background: url("../images/inst.svg") no-repeat center;
+  background: url("../images/social-icons/inst.svg") no-repeat center;
   transition: 0.2s ease;
 }
 
@@ -1111,6 +1116,38 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
   }
   .main-content__texts {
     padding: 0 40px;
+  }
+  .main-content__mini {
+    transition: none;
+    transform: none;
+    opacity: 1;
+  }
+  .main-content__mini._active {
+    transform: none;
+  }
+  .main-content__title {
+    transition: none;
+    transform: none;
+    opacity: 1;
+  }
+  .main-content__title._active {
+    transform: none;
+  }
+  .main-content__subtitle {
+    transition: none;
+    transform: none;
+    opacity: 1;
+  }
+  .main-content__subtitle._active {
+    transform: none;
+  }
+  .main-content__btn {
+    transition: none;
+    transform: none;
+    opacity: 1;
+  }
+  .main-content__btn._active {
+    transform: none;
   }
 }
 
@@ -1756,6 +1793,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
   position: relative;
   z-index: 3;
   background: transparent;
+  border-color: transparent;
 }
 
 .page-form-form__owl {
@@ -1929,16 +1967,50 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
   background: url("../images/slider-image/02.png") no-repeat center/cover;
 }
 
+.page-slider-slider__img-02:hover {
+  background: url("../images/slider-image/02hover.png") no-repeat center/cover;
+  transition: 0.2s ease;
+}
+
 .page-slider-slider__img-03 {
   background: url("../images/slider-image/03.png") no-repeat center/cover;
+}
+
+.page-slider-slider__img-03:hover {
+  background: url("../images/slider-image/03hover.png") no-repeat center/cover;
+  transition: 0.2s ease;
 }
 
 .page-slider-slider__img-04 {
   background: url("../images/slider-image/04.png") no-repeat center/cover;
 }
 
+.page-slider-slider__img-04:hover {
+  background: url("../images/slider-image/04hover.png") no-repeat center/cover;
+  transition: 0.2s ease;
+}
+
 .page-slider-slider__img-05 {
   background: url("../images/slider-image/05.png") no-repeat center/cover;
+}
+
+.page-slider-slider__img-05:hover {
+  background: url("../images/slider-image/05hover.png") no-repeat center/cover;
+  transition: 0.2s ease;
+}
+
+.page-slider-slider__img-06 {
+  background: url("../images/slider-image/06.png") no-repeat center/cover;
+}
+
+.page-slider-slider__img-06:hover {
+  background: url("../images/slider-image/06hover.png") no-repeat center/cover;
+  transition: 0.2s ease;
+}
+
+.page-slider-slider__frame {
+  opacity: 0;
+  visibility: hidden;
 }
 
 .page-slider-slider__name {
@@ -1988,6 +2060,28 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
 }
 
 @media (max-width: 600px) {
+  .page-slider-slider .page-slider-slider__slide.slick-center .page-slider-slider__frame {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .page-slider-slider .page-slider-slider__slide.slick-center .page-slider-slider__img-01 {
+    background: url("../images/slider-image/01hover.png") no-repeat center/cover;
+  }
+  .page-slider-slider .page-slider-slider__slide.slick-center .page-slider-slider__img-02 {
+    background: url("../images/slider-image/02hover.png") no-repeat center/cover;
+  }
+  .page-slider-slider .page-slider-slider__slide.slick-center .page-slider-slider__img-03 {
+    background: url("../images/slider-image/03hover.png") no-repeat center/cover;
+  }
+  .page-slider-slider .page-slider-slider__slide.slick-center .page-slider-slider__img-04 {
+    background: url("../images/slider-image/04hover.png") no-repeat center/cover;
+  }
+  .page-slider-slider .page-slider-slider__slide.slick-center .page-slider-slider__img-05 {
+    background: url("../images/slider-image/05hover.png") no-repeat center/cover;
+  }
+  .page-slider-slider .page-slider-slider__slide.slick-center .page-slider-slider__img-06 {
+    background: url("../images/slider-image/06hover.png") no-repeat center/cover;
+  }
   .page-slider-slider .slick-center.page-slider-slider__slide {
     width: 240px;
   }
