@@ -20,7 +20,7 @@ labels.addEventListener('click', (e) => {
 })
 
     $(document).ready(function(){
-    $('.page-slider-slider').slick({
+    $('.page-slider-slider').not('.slick-initialized').slick({
         slidesToShow:5,
         variableWidth:true,
         centerMode:true,
@@ -90,8 +90,10 @@ select('.select-mobile', {
         modal = document.querySelector(modalSelector),
         close = document.querySelector(closeSelector),
         allPopups = document.querySelectorAll('[data-popup]'),
-        btnUnderstand = document.querySelectorAll('.modal-question__btn')
-    btn.forEach(i => {
+        btnUnderstand = document.querySelectorAll('.modal-question__btn'),
+        btnThanks = document.querySelector('.modal-question__thanks')
+    
+        btn.forEach(i => {
         i.addEventListener('click', (e) => {
             e.preventDefault()
             modal.classList.remove('hide')
@@ -115,6 +117,11 @@ select('.select-mobile', {
         })
         modal.classList.add('hide')
         document.body.style.overflow = ''
+    })
+    btnThanks.addEventListener('click', function(){
+        allPopups.forEach(item => {
+            item.classList.add('hide')
+        })
     })
     modal.addEventListener('click', function(e){
         if(e.target.classList.contains('modal__body')){
